@@ -1,10 +1,22 @@
 {{! Завдання 1. Зробіть , щоб HTML документ мав білий фон  , використовуйте Root селектор}}
-
+<style>
+  :root {
+    background: white;
+  }
+</style>
 {{! Завдання 2. Зробіть, щоб всі елементи на сторінці мали текст чорного кольору  }}
-
+<style>
+  * {
+    color: black;
+  }
+</style>
 <body>
   {{! Завдання 3. Зробіть, щоб h1 мав Синій колір фону }}
-
+  <style>
+    h1 {
+      color:blue;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 3</div>
     <div class='card-body'>
@@ -15,7 +27,11 @@
   </section>
 
   {{! Завдання 4. Зробіть, щоб клас green мав текст зеленого кольору  }}
-
+  <style>
+    .green {
+      color: green;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 4</div>
     <div class='card-body'>
@@ -26,7 +42,11 @@
   </section>
 
   {{! Завдання 5. Зробіть, щоб елемент з індинтифікатором blue мав синій колір тексту }}
-
+  <style>
+    #blue {
+      color: blue;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 5</div>
     <div class='card-body'>
@@ -38,7 +58,14 @@
 
   {{! Завдання 6. Зробіть, щоб тег p мав червоний фон ,а тег div мав зелений фон  }}
   {{! Тут вам потрібно використовувати Селектор нащадка }}
-
+  <style>
+    .box div {
+      background: green;
+    }
+    .box p {
+      background: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 6</div>
     <div class='card-body'>
@@ -56,7 +83,12 @@
   </section>
 
   {{! Завдання 7. Задайте класу green зелений фон та білий колір тексту, використовуйте селектор класу  }}
-
+  <style>
+    section.green {
+      color: white;
+      background: green;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 7</div>
     <div class='card-body'>
@@ -70,7 +102,11 @@
 
   {{! Завдання 8. Зробіть червоний фон для дочірніх елементів тега ul }}
   {{! Використовуйте селектор для позначення дочірних елементів ( parent_tag > children_tag ) }}
-
+  <style>
+    ul > li {
+      background: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 8</div>
     <div class='card-body'>
@@ -86,7 +122,11 @@
 
   {{! Завдання 9. Зробіть червоний фон для тегів, які є сестринськими відносно тега button з класом header-button }}
   {{! Використовуйте Сестринські селектори відносно header-button }}
-
+  <style>
+    button.header-button + * {
+    background: red;
+  }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 9</div>
     <div class='card-body'>
@@ -94,13 +134,19 @@
         <header>
           <button class='header-button'>Click</button>
           <span>Logo</span>
+          <span>Logo2</span>
         </header>
       </div>
     </div>
   </section>
 
   <!--  Завдання 10. Зробіть синій фон для всіх cусідських тегів <p>, тегу який має клас 'susid' , а текст білим застосувавши сусідський селектор  -->
-
+  <style>
+    p.susid ~ p {
+      color: white;
+      background: blue;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 10</div>
     <div class='card-body'>
@@ -114,7 +160,12 @@
   </section>
 
   <!--  Завдання 11. Зробіть жовтий  фон  для класу .salo та індетифікатора #bread   -->
-
+  <style>
+    .salo,
+    #bread {
+      background: yellow;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 11</div>
     <div class='card-body'>
@@ -131,7 +182,11 @@
 
   <!--  Завдання №1: Для першого елементу списку зробіть колір тексту білим -->
   <!--   Використовуйте Селектор першої дитини :first-child. -->
-
+  <style>
+    .first-task ul li:first-child {
+      color: white;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 1</div>
     <div class='card-body'>
@@ -148,7 +203,11 @@
 
   <!--  Завдання №2:  Змінити колір тексту першого елемента списку в першому блоці ul на жовтий -->
   <!--   Використовуйте Селектор першої дитини :first-child. -->
-
+  <style>
+    .second-task ul:first-child li:first-child {
+      color: yellow;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 2</div>
     <div class='card-body'>
@@ -168,7 +227,11 @@
 
   <!--  Завдання №3:   Змінити фон першого елементу на жовтий в другому блоку ul -->
   <!--   Використовуйте Селектор першої дитини :first-child. -->
-
+  <style>
+    .third-task ul:nth-child(2) li:first-child {
+      background: yellow;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 3</div>
     <div class='card-body'>
@@ -188,7 +251,11 @@
 
   <!--  Завдання №4:  Змінити фон останнього елементу списку на жовтий. -->
   <!--   Використовуйте Селектор останньої дитини :last-child. -->
-
+  <style>
+    .four-task ul li:last-child {
+      background: yellow;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 4</div>
     <div class='card-body'>
@@ -203,7 +270,11 @@
 
   <!--  Завдання №5: Змінити колір тексту останнього елемента списку в останньому блоці ul на білий -->
   <!--   Використовуйте Селектор останньої дитини :last-child. -->
-
+  <style>
+    .five-task ul:last-child li:last-child {
+      color: violet;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 5</div>
     <div class='card-body'>
@@ -223,7 +294,11 @@
 
   <!--  Завдання №6: Змінити колір тексту на червоний у блоках div, які єдині в своєму батьківському елементі section -->
   <!--   Використовуйте Селектор одиничної дитини :only-child -->
-
+  <style>
+    .only-child-task div:only-child {
+      color: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 6</div>
     <div class='card-body'>
@@ -245,7 +320,11 @@
 
   <!--  Завдання №7:  Застосуйте червоний фон до першого абзацу в div з классом seven-task  -->
   <!--   Використовуйте Селектор першого типу :first-of-type-->
-
+  <style>
+    .seven-task p:first-of-type {
+      background: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 7</div>
     <div class='card-body'>
@@ -261,7 +340,11 @@
 
   <!--  Завдання №8:  Застосуйте червоний фон до останнього абзацу в div з классом eight-task  -->
   <!--   Використовуйте Селектор останнього типу :last-of-type-->
-
+  <style>
+    .eight-task p:last-of-type {
+      background: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 8</div>
     <div class='card-body'>
@@ -277,11 +360,16 @@
 
   <!--  Завдання №9: Застосуйте жовтий фон для всіх <p> елементів, якщо в батьківському елементі більше не має <p>. -->
   <!--   Використовуйте Селектор одиничного типу :only-of-type-->
-
+  <style>
+    .nine-task p:only-of-type {
+      background: yellow;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 8</div>
     <div class='card-body'>
       <div class='nine-task'>
+        <p>TEST Це єдиний параграф в своїй категорії</p>
         <div class='text-wrapper'>
           <p>Це єдиний параграф в своїй категорії</p>
         </div>
@@ -304,7 +392,11 @@
   <!-- Завдання №1.  Зайдайте білий колір тексту всім посиланням які мають атрибут href
       Використовуйте селектор назви атрибута-
    -->
-
+  <style>
+    a[href] {
+      color: white;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 1</div>
     <div class='card-body'>
@@ -324,7 +416,11 @@
 
   <!--Завдання №2. Зайдайте жовтий колір тексту всім елементам списку які мають атрибут value
       Використовуйте селектор назви атрибута-->
-
+  <style>
+    .lesson-three-task-two li[value]{
+      color: yellow;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 2</div>
     <div class='card-body'>
@@ -340,7 +436,11 @@
   <!-- Завдання №3. Застосуйте селектор значення атрибута,
    щоб встановити червоний фон всім елементам списку які мають атрибут 
    value зі значенням '3' -->
-
+  <style>
+    .lesson-three-task-three li[value="3"]{
+      background: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 3</div>
     <div class='card-body'>
@@ -355,7 +455,11 @@
 
   <!-- Завдання №4. Застосуйте селектор наявності значення атрибута,
     щоб встановити синій фон для кнопки з класом "primary"  .-->
-
+  <style>
+    .lesson-three-task-four button.primary {
+      background: blue;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 4</div>
     <div class='card-body'>
@@ -370,7 +474,11 @@
   <!-- Завдання №5. Надайте червоний фон всім кнопка назви класу яких починаються зі слова secondary -->
 
   <!--  Використовуйте селектор префіксу значення атрибута -->
-
+  <style>
+    .lesson-three-task-five button[class^="secondary"] {
+      background: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 5</div>
     <div class='card-body'>
@@ -390,7 +498,12 @@
 
   <!-- Завдання №6.  Застосуйте cелектор початку значення атрибута, щоб стилізувати тільки ті елементи списку,
    класи яких починаються на "b" та встановіть для них зелений колір тексту та білий фон. -->
-
+  <style>
+    .lesson-three-task-six ul li[class^="b"] {
+      color: green;
+      background: white;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 6</div>
     <div class='card-body'>
@@ -406,7 +519,12 @@
 
   <!-- Завдання №7. Застосуйте селектор кореня значення атрибута, щоб стилізувати тільки ті елементи списку,
   в назві класів яких зустрічається 'on' та встановіть для них зелений колір тексту та білий фон. -->
-
+  <style>
+    .lesson-three-task-seven ul li[class*="on"] {
+      color: green;
+      background: white;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 7</div>
     <div class='card-body'>
@@ -422,7 +540,11 @@
 
   <!--   Завдання №8. Напишіть CSS-код, який за допомогою конструкції селектор кінцівки значення атрибута виділить червоним фоном елементи ,
   які мають в кінці назви класу літеру "s". -->
-
+  <style>
+    .lesson-three-task-eight *[class$="s"] {
+      background: purple;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 8</div>
     <div class='card-body'>
@@ -445,7 +567,11 @@
 
   <!--  Завдання №9. Зробіть першу букву заголовків червоним кольором.-->
   <!--  Використовуйте селектор псевдоелементу першої літери  -->
-
+  <style>
+    .lesson-three-task-nine h2::first-letter {
+      color: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 9</div>
     <div class='card-body'>
@@ -458,7 +584,11 @@
 
   <!--   Завдання №10. Задайте першому рядку жовтий фон. -->
   <!--  Використовуйте селектор псевдоелементу першого рядка -->
-
+  <style>
+    .lesson-three-task-ten::first-line {
+      background: yellow;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 10</div>
     <div class='card-body'>
@@ -477,7 +607,11 @@
 
   <!--    Завдання №11. Задайте червоний фон плейсхолдера для інпут-поля. -->
   <!--  Використовуйте цей селектор псевдоелемента плейсхолдера-->
-
+  <style>
+    .lesson-three-task-eleven input::placeholder {
+      background: red;
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 11</div>
     <div class='card-body'>
@@ -492,7 +626,11 @@
 
   <!--   Завдання №12. Додайте "➤" перед кожним елементом списку;
   Використовуйте селектора псевдоелемента ”попереду” -->
-
+  <style>
+    .lesson-three-task-twelve ul li::before {
+      content: '➤';
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 12</div>
     <div class='card-body'>
@@ -508,7 +646,11 @@
 
   <!--   Завдання №13. Додайте "➤" після кожного елемента списку;
   Використовуйте селектора псевдоелемента ”після” -->
-
+  <style>
+    .lesson-three-task-thirteen ul li::after {
+      content: '➤';
+    }
+  </style>
   <section class='m-5 card'>
     <div class='card-header'>Завдання 13</div>
     <div class='card-body'>
